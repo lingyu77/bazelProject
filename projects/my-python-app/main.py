@@ -11,7 +11,7 @@ my_calculator = Calculator()
 def hello():
     num1 = randint(0, 100)
     num2 = randint(0, 100)
-    message = "{} + {} = {}", format(num1, num2, my_calculator(num1 + num2))
+    message = "{} + {} = {}".format(num1, num2, my_calculator.add(num1, num2))
     return message
 
 

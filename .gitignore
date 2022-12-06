@@ -1,5 +1,5 @@
 bazel-bazelproject/
 bazel-bin/
 bazel-out/
-bazelisk.exe
+bazel-testlogs/
 .venv/

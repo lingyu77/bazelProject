@@ -7,13 +7,10 @@ http_archive(
 )
 
 load("@rules_python//python:pip.bzl", "pip_parse")
-
 pip_parse(
-   name = "my_deps",
-   requirements_lock  = "//third_party:requirements.txt",
+   name = "python_deps",
+   requirements_lock = "//third_party:requirements.txt",
 )
 
-# Load the starlark macro which will define your dependencies.
-load("@my_deps//:requirements.bzl", "install_deps")
-# Call it to define repos for your requirements.
+load("@python_deps//:requirements.bzl", "install_deps")
 install_deps()
