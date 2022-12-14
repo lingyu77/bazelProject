@@ -1,3 +1,5 @@
+# Bazel Project
+
 Install [Bazelisk](https://github.com/bazelbuild/bazelisk), a wrapper around `Bazel` that takes care of downloading the correct
 version of `Bazel` for you. Bazel is an open-source build and test tool similar to Make, Maven, and Gradle.
 
@@ -22,7 +24,7 @@ sudo cp bazelisk /usr/local/bin
 ```
 
 ## Concepts
-Workspace: `WORKSPACE` or `WORKSPACE.bazel`. The root of the main repository, also called @ .
+Workspace: `WORKSPACE` or `WORKSPACE.bazel`. The root of the main repository, also called `@`.
 Packages: `BUILD` or `BUILD.bazel`. A collection of related files and a specification of how they can be used to produce output artifacts.
 Targets: A package is a container of targets. Most targets are *files* and *rules*.
 
@@ -31,7 +33,7 @@ Targets: A package is a container of targets. Most targets are *files* and *rule
 bazelisk --version
 bazelisk build //...
 
-bazelisk test projects/calculator/...
+bazelisk test --test_output=all projects/calculator/...
 cat /private/vat/tmp/_bazel_xxxxxx/.../projects/calculator_test/test.log
 
 python -m venv .venv

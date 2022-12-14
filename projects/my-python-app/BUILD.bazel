@@ -5,6 +5,7 @@ py_binary(
   srcs = ["main.py"],
   deps = [
     "//projects/calculator:calculator",
-    requirement("flask")
+    requirement("flask"),
+    requirement("flask-cors")
   ]
 )
