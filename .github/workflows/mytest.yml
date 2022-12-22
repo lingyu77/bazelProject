@@ -7,7 +7,10 @@ on:
     branches: [ main ]
 
 jobs:
-  mytest:
+  check:
+    name: "Test output"
+    runs-on: ubuntu-latest
+    steps:
     - name: test-output-1
       id: params
       - run: |
