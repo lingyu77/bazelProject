@@ -1,6 +1,6 @@
 from flask import Flask
 from random import randint
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 
 from projects.calculator.calculator import Calculator
 

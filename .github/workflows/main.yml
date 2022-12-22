@@ -14,5 +14,13 @@ jobs:
     - uses: bazelbuild/setup-bazelisk@v2
     - run: bazel build //...
     - run: bazel test //...
-        
-                
+    - name: test-output-1
+      id: params
+      - run: |
+          WORK_VER=123
+          echo "G_WORK_VER=$WORK_VER" >> $GITHUB_OUTPUT
+    - name: test-output-2
+      run: |
+          echo $G_WORK_VER
+      env:
+        G_WORK_VER: ${{steps.params.outputs.G_WORK_VER}}
