@@ -11,13 +11,13 @@ jobs:
     name: "Test output"
     runs-on: ubuntu-latest
     steps:
-    - name: test-output-1
-      id: params
-      - run: |
+      - name: test-output-1
+        id: params
+        run: |
           WORK_VER=123
           echo "G_WORK_VER=$WORK_VER" >> $GITHUB_OUTPUT
-    - name: test-output-2
-      run: |
+      - name: test-output-2
+        run: |
           echo $G_WORK_VER
-      env:
-        G_WORK_VER: ${{steps.params.outputs.G_WORK_VER}}
+        env:
+          G_WORK_VER: ${{steps.params.outputs.G_WORK_VER}}
