@@ -21,3 +21,10 @@ jobs:
           echo $G_WORK_VER
         env:
           G_WORK_VER: ${{steps.params.outputs.G_WORK_VER}}
+      - name: test-output-3
+        run: |
+          WORK_VER_ECHO=12345
+          echo "WORK_VER_ECHO=$(echo $WORK_VER_ECHO)" >> $GITHUB_ENV
+      - name: test-output-4
+        run: |
+          echo $WORK_VER_ECHO
